@@ -20,3 +20,9 @@
     - "{{ rundeck_packages }}"
   tags:
     - rundeck
+
+- name: Hold installed Rundeck version
+  become: yes
+  shell: apt-mark hold rundeck
+  tags:
+    - rundeck
